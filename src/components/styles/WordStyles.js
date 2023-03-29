@@ -6,7 +6,8 @@ const WordStyles = styled.div`
   cursor: grab;
   border: 1px solid black;
   width: ${props => props.wide}px};
-  height: 1.5rem;
+  height: 1.55rem;
+  position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;

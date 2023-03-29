@@ -1,25 +1,23 @@
 .App {
   text-align: center;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 body {
   background-color: white;
   background-image: url(./images/floor.png);
   background-repeat: repeat;
-  height: 100vh;
+  min-height: 100vh;
   aspect-ratio: 1/1;
   overflow-x: hidden;
 }
 
-/* .word {
-  background-color: white;
-  color: black;
-  border: 1px solid black;
-  height: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.25rem;
-} */
+.border {
+  outline: 2px double black;
+  outline-offset: -8px;
+}
+
+.relative {
+  position: relative;
+}

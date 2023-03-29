@@ -5,7 +5,7 @@ const Word = ({ text, id }) => {
   const [width, setWidth] = React.useState(4)
 
   React.useEffect(() => {
-    setWidth(text.length * 10)
+    setWidth(text.length * 10 + 10)
   }, [text])
 
   return (
