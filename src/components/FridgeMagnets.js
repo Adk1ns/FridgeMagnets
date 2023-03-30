@@ -37,13 +37,14 @@ const FridgeMagnets = () => {
   //leaving off right here, issues with local storage and saving
   console.log(localStorage.getItem('words'))
 
+  //set bounds for magnets
   const viewportWidth = window.innerWidth // get the viewport width in pixels
   const bounds = {
     left: viewportWidth * 0.025,
     top: 15,
     right: viewportWidth * 0.44,
     bottom: viewportWidth
-  } // example bounds as 20% to 80% of viewport width
+  }
 
   return (
     <Scene>
