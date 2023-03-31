@@ -1,16 +1,16 @@
 .App {
   text-align: center;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
 }
 
 body {
-  background-color: white;
-  background-image: url(./images/floor.png);
+  background-color: #edede9;
+  font-family: 'Josefin Sans';
+  /* background-image: url(./images/floor.png); */
   background-repeat: repeat;
   min-height: 100vh;
   aspect-ratio: 1/1;
-  overflow-x: hidden;
 }
 
 .border {

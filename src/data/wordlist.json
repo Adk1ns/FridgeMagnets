@@ -1,0 +1,82 @@
+[
+  {
+    "text": "Welcome",
+    "position": {
+      "x": 109,
+      "y": 219
+    },
+    "id": 1
+  },
+  {
+    "text": "to",
+    "position": {
+      "x": 200,
+      "y": 220
+    },
+    "id": 2
+  },
+  {
+    "text": "fridge",
+    "position": {
+      "x": 240,
+      "y": 221
+    },
+    "id": 3
+  },
+  {
+    "text": "magnets",
+    "position": {
+      "x": 315,
+      "y": 220
+    },
+    "id": 4
+  },
+  {
+    "text": "an",
+    "position": {
+      "x": 110,
+      "y": 255
+    },
+    "id": 5
+  },
+  {
+    "text": "app",
+    "position": {
+      "x": 150,
+      "y": 256
+    },
+    "id": 6
+  },
+  {
+    "text": "gen-z",
+    "position": {
+      "x": 195,
+      "y": 254
+    },
+    "id": 7
+  },
+  {
+    "text": "will",
+    "position": {
+      "x": 255,
+      "y": 254
+    },
+    "id": 8
+  },
+  {
+    "text": "never",
+    "position": {
+      "x": 370,
+      "y": 250
+    },
+    "id": 9
+  },
+  {
+    "text": "understand",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 10
+  }
+]

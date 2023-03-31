@@ -8,6 +8,8 @@ const WordStyles = styled.div`
   width: ${props => props.wide}px};
   height: 1.55rem;
   position: absolute;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
     display: flex;
     justify-content: center;
     align-items: center;

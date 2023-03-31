@@ -3,11 +3,10 @@ import Draggable from 'react-draggable'
 import Scene from './Scene'
 import Word from './Word'
 import Header from './Header'
+import wordlist from '../data/wordlist'
 
 const FridgeMagnets = () => {
   const [dragWord, setDragWord] = React.useState('')
-
-  //make an array of objects with the text and position
   const [words, setWords] = React.useState([])
 
   //set bounds for magnets
@@ -25,16 +24,7 @@ const FridgeMagnets = () => {
     if (localStorageWords) {
       setWords(localStorageWords)
     } else {
-      setWords([
-        { text: '0', position: { x: 910, y: 210 }, id: 1 },
-        { text: '0', position: { x: 310, y: 210 }, id: 2 },
-        { text: '0', position: { x: 310, y: 510 }, id: 3 },
-        { text: '0', position: { x: 110, y: 610 }, id: 4 },
-        { text: '000', position: { x: 110, y: 650 }, id: 5 },
-        { text: '000', position: { x: 120, y: 700 }, id: 6 },
-        { text: 'local', position: { x: 210, y: 410 }, id: 7 },
-        { text: 'the', position: { x: 310, y: 80 }, id: 8 }
-      ])
+      setWords(wordlist)
     }
   }, [])
 
@@ -45,20 +35,18 @@ const FridgeMagnets = () => {
 
   //update words array with new position for word
   const endPosition = position => {
-    console.log(position.clientX, position.clientY, dragWord)
+    console.log(position, position.clientY, dragWord)
     //add new position dragWord
     const updatedWords = words.map(word => {
       if (word === dragWord) {
         return {
           ...word,
-          position: { x: position.clientX, y: position.clientY }
+          position: { x: position.x, y: position.y }
         }
       }
       return word
     })
     setWords(updatedWords)
-    //save words to local storage
-    // localStorage.setItem('words', JSON.stringify(words))
   }
 
   //FIX: words are saving but are rendering in the wrong place, off by a few pixels
@@ -72,9 +60,9 @@ const FridgeMagnets = () => {
   console.log(words)
   return (
     <Scene>
-      {/* <div className="relative">
-        <Header />
-      </div> */}
+      <div className="relative">
+        <Header words={words} handleSave={handleSave} />
+      </div>
       {words.map((word, index, id) => {
         return (
           <Draggable
@@ -90,7 +78,6 @@ const FridgeMagnets = () => {
           </Draggable>
         )
       })}
-      <button onClick={handleSave}>save</button>
     </Scene>
   )
 }
