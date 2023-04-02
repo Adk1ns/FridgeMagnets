@@ -1,11 +1,22 @@
 import React from 'react'
 import HeaderStyles from './styles/HeaderStyles'
-import wordlist from '../data/wordlist'
 
-const Header = ({ handleSave, handleReset }) => {
-  const [inputValue, setInputValue] = React.useState('')
+const Header = ({
+  handleSave,
+  handleReset,
+  setInputValue,
+  inputValue,
+  handleAdd
+}) => {
+  //if user presses the enter key, add the word to the fridge
+  const handleEnter = e => {
+    if (e.key === 'Enter') {
+      handleAdd()
+    }
+  }
 
-  console.log(inputValue)
+  //add event listener to listen for enter key
+  window.addEventListener('keydown', handleEnter)
 
   return (
     <HeaderStyles>
@@ -14,13 +25,17 @@ const Header = ({ handleSave, handleReset }) => {
       <div className="">
         <button onClick={handleSave}>Save</button>
         <button onClick={handleReset}>Reset</button>
-        <input
-          type="text"
-          label="Add"
-          placeholder="Add"
-          onChange={e => setInputValue(e.target.value)}
-          maxLength={13}
-        />
+        <>
+          <input
+            type="text"
+            label="Add"
+            placeholder="Add"
+            onChange={e => setInputValue(e.target.value)}
+            maxLength={13}
+            value={inputValue}
+          />
+          <button onClick={handleAdd}>+</button>
+        </>
       </div>
     </HeaderStyles>
   )

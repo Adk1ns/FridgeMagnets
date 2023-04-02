@@ -4,10 +4,13 @@ import Scene from './Scene'
 import Word from './Word'
 import Header from './Header'
 import wordlist from '../data/wordlist'
+import About from './About'
 
 const FridgeMagnets = () => {
   const [dragWord, setDragWord] = React.useState('')
   const [words, setWords] = React.useState([])
+  const [inputValue, setInputValue] = React.useState('')
+  const [about, toggleAbout] = React.useState(false)
 
   //set bounds for magnets
   const viewportWidth = window.innerWidth
@@ -28,6 +31,13 @@ const FridgeMagnets = () => {
     }
   }, [])
 
+  React.useEffect(() => {
+    window.addEventListener('keydown', handleDelete)
+    return () => {
+      window.removeEventListener('keydown', handleDelete)
+    }
+  }, [dragWord])
+
   //set the word to be moved
   const handleDrag = word => {
     setDragWord(word)
@@ -35,11 +45,6 @@ const FridgeMagnets = () => {
 
   //update words array with new position for word
   const endPosition = position => {
-    console.log(
-      position.clientX - position.offsetX,
-      position.clientY - position.offsetY
-    )
-    //add new position dragWord, subtract offset to get correct position
     const updatedWords = words.map(word => {
       if (word === dragWord) {
         return {
@@ -50,6 +55,7 @@ const FridgeMagnets = () => {
           }
         }
       }
+
       return word
     })
     setWords(updatedWords)
@@ -58,12 +64,9 @@ const FridgeMagnets = () => {
   //save words to local storage
   const handleSave = () => {
     localStorage.setItem('words', JSON.stringify(words))
-    console.log('saved', words)
   }
 
   const handleReset = () => {
-    console.log('reset')
-    //not working, maybe because it is checking id and not position?
     const resetWords = words.map(word => {
       return {
         ...word,
@@ -79,12 +82,48 @@ const FridgeMagnets = () => {
     window.location.reload()
   }
 
-  // console.log(words)
+  //add new word to words array
+  const handleAdd = () => {
+    const newWord = {
+      text: inputValue,
+      position: {
+        x: 10,
+        y: 10
+      },
+      id: Math.floor(Math.random() * 100000)
+    }
+    setWords([...words, newWord])
+    setInputValue('')
+  }
+
+  //if user presses deleted key, remove the last dragged word
+  //ERROR: words are out of position
+  const handleDelete = e => {
+    if (e.key === 'Delete') {
+      words.map(word => {
+        if (word === dragWord) {
+          const updatedWords = words.filter(word => word !== dragWord)
+          setWords(updatedWords)
+        }
+      })
+    }
+  }
+
   return (
     <Scene>
       <div className="relative">
-        <Header handleSave={handleSave} handleReset={handleReset} />
+        <Header
+          handleSave={handleSave}
+          handleReset={handleReset}
+          handleAdd={handleAdd}
+          setInputValue={setInputValue}
+          inputValue={inputValue}
+        />
       </div>
+      <h3 className="about" onClick={() => toggleAbout(!about)}>
+        ?
+      </h3>
+      {about && <About />}
       {words.map((word, index, id) => {
         return (
           <Draggable
@@ -94,7 +133,7 @@ const FridgeMagnets = () => {
             bounds={bounds}
             onStop={position => endPosition(position)}
           >
-            <div>
+            <div onClick={() => setDragWord(word)}>
               <Word text={word.text} id={id} />
             </div>
           </Draggable>
