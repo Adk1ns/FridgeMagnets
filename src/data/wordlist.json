@@ -78,5 +78,141 @@
       "y": 250
     },
     "id": 10
+  },
+  {
+    "text": "the",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 11
+  },
+  {
+    "text": "apple",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 12
+  },
+  {
+    "text": "space",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 13
+  },
+  {
+    "text": "s",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 14
+  },
+  {
+    "text": "friend",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 15
+  },
+  {
+    "text": "for",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 16
+  },
+  {
+    "text": "you",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 17
+  },
+  {
+    "text": "me",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 18
+  },
+  {
+    "text": "yes",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 19
+  },
+  {
+    "text": "no",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 20
+  },
+  {
+    "text": "have",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 21
+  },
+  {
+    "text": "been",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 22
+  },
+  {
+    "text": "sky",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 23
+  },
+  {
+    "text": "blue",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 24
+  },
+  {
+    "text": "dog",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 25
+  },
+  {
+    "text": "cat",
+    "position": {
+      "x": 440,
+      "y": 250
+    },
+    "id": 26
+  },
+  {
+    "text": "🔥",
+    "position": {
+      "x": 480,
+      "y": 350
+    },
+    "id": 27
   }
 ]

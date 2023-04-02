@@ -3,7 +3,8 @@ import styled from 'styled-components'
 import fridgeWhite from '../images/fridgeWhite2.png'
 
 const StyledScene = styled.div`
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   background: transparent;
   ${'' /* background-image: url(${fridgeWhite}); */}
   -webkit-background-size: cover;
