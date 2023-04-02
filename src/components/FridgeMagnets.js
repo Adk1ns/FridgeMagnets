@@ -63,8 +63,20 @@ const FridgeMagnets = () => {
 
   const handleReset = () => {
     console.log('reset')
-    //not working
-    setWords(wordlist)
+    //not working, maybe because it is checking id and not position?
+    const resetWords = words.map(word => {
+      return {
+        ...word,
+        position: {
+          x: 0,
+          y: 0
+        }
+      }
+    })
+    setWords(resetWords)
+
+    localStorage.removeItem('words')
+    window.location.reload()
   }
 
   // console.log(words)
