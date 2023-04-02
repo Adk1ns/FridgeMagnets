@@ -61,11 +61,17 @@ const FridgeMagnets = () => {
     console.log('saved', words)
   }
 
+  const handleReset = () => {
+    console.log('reset')
+    //not working
+    setWords(wordlist)
+  }
+
   // console.log(words)
   return (
     <Scene>
       <div className="relative">
-        <Header words={words} handleSave={handleSave} />
+        <Header handleSave={handleSave} handleReset={handleReset} />
       </div>
       {words.map((word, index, id) => {
         return (
