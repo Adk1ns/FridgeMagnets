@@ -11,6 +11,10 @@ const GlobalStyles = styled.div`
     border-bottom: 1px solid black;
     width: 60%;
   }
+
+  .relative {
+    position: relative;
+  }
 `
 
 export default GlobalStyles

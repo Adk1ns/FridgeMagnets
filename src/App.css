@@ -7,13 +7,12 @@
 body {
   background-color: #edede9;
   font-family: 'Josefin Sans';
-  /* background-image: url(./images/floor.png); */
   background-repeat: repeat;
-  min-height: 100vh;
-  aspect-ratio: 1/1;
+  overflow: hidden;
 }
 
 .border {
+  border: 3px solid black;
   outline: 2px double black;
   outline-offset: -8px;
 }

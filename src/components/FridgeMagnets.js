@@ -35,13 +35,19 @@ const FridgeMagnets = () => {
 
   //update words array with new position for word
   const endPosition = position => {
-    console.log(position, position.clientY, dragWord)
-    //add new position dragWord
+    console.log(
+      position.clientX - position.offsetX,
+      position.clientY - position.offsetY
+    )
+    //add new position dragWord, subtract offset to get correct position
     const updatedWords = words.map(word => {
       if (word === dragWord) {
         return {
           ...word,
-          position: { x: position.x, y: position.y }
+          position: {
+            x: position.clientX - position.offsetX,
+            y: position.clientY - position.offsetY
+          }
         }
       }
       return word
@@ -49,15 +55,13 @@ const FridgeMagnets = () => {
     setWords(updatedWords)
   }
 
-  //FIX: words are saving but are rendering in the wrong place, off by a few pixels
-
   //save words to local storage
   const handleSave = () => {
     localStorage.setItem('words', JSON.stringify(words))
     console.log('saved', words)
   }
 
-  console.log(words)
+  // console.log(words)
   return (
     <Scene>
       <div className="relative">

@@ -2,217 +2,97 @@
   {
     "text": "Welcome",
     "position": {
-      "x": 109,
-      "y": 219
+      "x": 184,
+      "y": 93
     },
     "id": 1
   },
   {
     "text": "to",
     "position": {
-      "x": 200,
-      "y": 220
+      "x": 286,
+      "y": 87
     },
     "id": 2
   },
   {
     "text": "fridge",
     "position": {
-      "x": 240,
-      "y": 221
+      "x": 345,
+      "y": 85
     },
     "id": 3
   },
   {
     "text": "magnets",
     "position": {
-      "x": 315,
-      "y": 220
+      "x": 434,
+      "y": 94
     },
     "id": 4
   },
   {
-    "text": "an",
+    "text": "made",
     "position": {
-      "x": 110,
-      "y": 255
+      "x": 82,
+      "y": 286
     },
     "id": 5
   },
   {
-    "text": "app",
+    "text": "with",
     "position": {
-      "x": 150,
-      "y": 256
+      "x": 272,
+      "y": 284
     },
     "id": 6
   },
   {
-    "text": "gen-z",
+    "text": "🌲",
     "position": {
-      "x": 195,
-      "y": 254
+      "x": 243,
+      "y": 281
     },
     "id": 7
   },
   {
-    "text": "will",
+    "text": "in",
     "position": {
-      "x": 255,
-      "y": 254
+      "x": 139,
+      "y": 294
     },
     "id": 8
   },
   {
-    "text": "never",
+    "text": "Oregon",
     "position": {
-      "x": 370,
-      "y": 250
+      "x": 167,
+      "y": 282
     },
     "id": 9
   },
   {
-    "text": "understand",
+    "text": "💚",
     "position": {
-      "x": 440,
-      "y": 250
+      "x": 329,
+      "y": 291
     },
     "id": 10
   },
   {
-    "text": "the",
+    "text": "Adk1ns",
     "position": {
-      "x": 440,
-      "y": 250
-    },
-    "id": 11
-  },
-  {
-    "text": "apple",
-    "position": {
-      "x": 440,
-      "y": 250
-    },
-    "id": 12
-  },
-  {
-    "text": "space",
-    "position": {
-      "x": 440,
-      "y": 250
-    },
-    "id": 13
-  },
-  {
-    "text": "s",
-    "position": {
-      "x": 440,
-      "y": 250
-    },
-    "id": 14
-  },
-  {
-    "text": "friend",
-    "position": {
-      "x": 440,
-      "y": 250
+      "x": 130,
+      "y": 366
     },
     "id": 15
   },
   {
-    "text": "for",
+    "text": "by",
     "position": {
-      "x": 440,
-      "y": 250
-    },
-    "id": 16
-  },
-  {
-    "text": "you",
-    "position": {
-      "x": 440,
-      "y": 250
-    },
-    "id": 17
-  },
-  {
-    "text": "me",
-    "position": {
-      "x": 440,
-      "y": 250
+      "x": 97,
+      "y": 353
     },
     "id": 18
-  },
-  {
-    "text": "yes",
-    "position": {
-      "x": 440,
-      "y": 250
-    },
-    "id": 19
-  },
-  {
-    "text": "no",
-    "position": {
-      "x": 440,
-      "y": 250
-    },
-    "id": 20
-  },
-  {
-    "text": "have",
-    "position": {
-      "x": 440,
-      "y": 250
-    },
-    "id": 21
-  },
-  {
-    "text": "been",
-    "position": {
-      "x": 440,
-      "y": 250
-    },
-    "id": 22
-  },
-  {
-    "text": "sky",
-    "position": {
-      "x": 440,
-      "y": 250
-    },
-    "id": 23
-  },
-  {
-    "text": "blue",
-    "position": {
-      "x": 440,
-      "y": 250
-    },
-    "id": 24
-  },
-  {
-    "text": "dog",
-    "position": {
-      "x": 440,
-      "y": 250
-    },
-    "id": 25
-  },
-  {
-    "text": "cat",
-    "position": {
-      "x": 440,
-      "y": 250
-    },
-    "id": 26
-  },
-  {
-    "text": "🔥",
-    "position": {
-      "x": 480,
-      "y": 350
-    },
-    "id": 27
   }
 ]
