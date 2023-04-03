@@ -15,11 +15,12 @@ const HeaderStyles = styled.div`
   background: rgba(255, 255, 255, 0.65);
   display: flex;
   flex-direction: column;
+
   h1 {
     margin: 0.35rem;
     margin-top: 1rem;
   }
-  h5{ 
+  h5 {
     margin: 0.35rem;
   }
 
@@ -32,14 +33,39 @@ const HeaderStyles = styled.div`
     font-size: 1.5rem;
     cursor: pointer;
     color: black;
-    
+
     &:active {
       transform: translateY(2px);
     }
     &:hover {
       font-style: italic;
+      text-decoration: underline #8e6900;
+    }
+  }
+
+  input {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    width: 7rem;
+    text-align: center;
+    color: black;
+    outline: none;
+    &:hover {
+      font-style: italic;
       text-decoration: underline;
       color: #8e6900;
+    }
+  }
+
+  input::-webkit-input-placeholder {
+    color: black;
+  }
+
+  input:focus {
+    outline-color: #8e6900;
+    outline-style: dashed;
+    outline-width: 2px;
   }
 `
 

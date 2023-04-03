@@ -8,11 +8,7 @@ const Word = ({ text, id }) => {
     setWidth(text.length * 10 + 10)
   }, [text])
 
-  return (
-    <div>
-      <WordStyles wide={width}>{text}</WordStyles>
-    </div>
-  )
+  return <WordStyles wide={width}>{text}</WordStyles>
 }
 
 export default Word

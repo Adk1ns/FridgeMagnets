@@ -1,23 +1,34 @@
 import React from 'react'
 import styled from 'styled-components'
-import fridgeWhite from '../images/fridgeWhite2.png'
 
-const StyledScene = styled.div`
+const Scene = styled.div`
   height: 100vh;
   width: 100vw;
   background: transparent;
-  ${'' /* background-image: url(${fridgeWhite}); */}
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: 100%;
-  background-repeat: no-repeat;
-  aspect-ratio: 1/1;
   overflow: hidden;
-`
 
-const Scene = ({ children }) => {
-  return <StyledScene>{children}</StyledScene>
-}
+  h3 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 1rem;
+    margin-right: 1.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.25);
+    border: 2px solid black;
+    border-radius: 50%;
+    height: 2.25rem;
+    width: 2.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &:hover {
+      color: #8e6900;
+    }
+  }
+`
 
 export default Scene
