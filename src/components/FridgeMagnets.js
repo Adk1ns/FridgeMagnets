@@ -31,13 +31,6 @@ const FridgeMagnets = () => {
     }
   }, [])
 
-  React.useEffect(() => {
-    window.addEventListener('keydown', handleDelete)
-    return () => {
-      window.removeEventListener('keydown', handleDelete)
-    }
-  }, [dragWord])
-
   //set the word to be moved
   const handleDrag = word => {
     setDragWord(word)
@@ -108,6 +101,13 @@ const FridgeMagnets = () => {
       })
     }
   }
+
+  React.useEffect(() => {
+    window.addEventListener('keydown', handleDelete)
+    return () => {
+      window.removeEventListener('keydown', handleDelete)
+    }
+  }, [dragWord])
 
   return (
     <Scene>

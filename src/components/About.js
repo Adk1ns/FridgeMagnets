@@ -15,7 +15,7 @@ const About = () => {
       </h4>
       <h4>
         Or visit{' '}
-        <a href="https://adk1ns.com/" target="_blank">
+        <a href="https://adk1ns.com/" target="_blank" rel="noreferrer">
           <span>Adk1ns.com</span>
         </a>
       </h4>
