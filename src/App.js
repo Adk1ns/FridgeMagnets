@@ -1,7 +1,7 @@
 import FridgeMagnets from './components/FridgeMagnets'
 import GlobalStyles from './components/styles/GlobalStyles'
-import './App.css'
 import fridgeWhite from './images/fridgeWhite2.png'
+import './App.css'
 
 function App() {
   return (

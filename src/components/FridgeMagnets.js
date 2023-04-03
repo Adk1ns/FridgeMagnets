@@ -21,8 +21,8 @@ const FridgeMagnets = () => {
     bottom: viewportWidth
   }
 
+  //check if there are words in local storage
   React.useEffect(() => {
-    //check if there are words in local storage
     const localStorageWords = JSON.parse(localStorage.getItem('words'))
     if (localStorageWords) {
       setWords(localStorageWords)
@@ -48,7 +48,6 @@ const FridgeMagnets = () => {
           }
         }
       }
-
       return word
     })
     setWords(updatedWords)
@@ -59,6 +58,7 @@ const FridgeMagnets = () => {
     localStorage.setItem('words', JSON.stringify(words))
   }
 
+  //reset words to original state
   const handleReset = () => {
     const resetWords = words.map(word => {
       return {
@@ -76,21 +76,22 @@ const FridgeMagnets = () => {
   }
 
   //add new word to words array
-  const handleAdd = () => {
-    const newWord = {
-      text: inputValue,
-      position: {
-        x: 10,
-        y: 10
-      },
-      id: Math.floor(Math.random() * 100000)
+  const handleAdd = e => {
+    if (e.key === 'Enter') {
+      const newWord = {
+        text: inputValue,
+        position: {
+          x: 10,
+          y: 10
+        },
+        id: Math.floor(Math.random() * 100000)
+      }
+      setWords([...words, newWord])
+      setInputValue('')
     }
-    setWords([...words, newWord])
-    setInputValue('')
   }
 
-  //if user presses delete key, remove the last dragged word
-  //ERROR: words are out of position
+  //delete word from words array
   const handleDelete = e => {
     if (e.key === 'Delete') {
       words.map(word => {
@@ -102,6 +103,7 @@ const FridgeMagnets = () => {
     }
   }
 
+  //add event listeners for delete and add
   React.useEffect(() => {
     window.addEventListener('keydown', handleDelete)
     return () => {
@@ -109,13 +111,19 @@ const FridgeMagnets = () => {
     }
   }, [dragWord])
 
+  React.useEffect(() => {
+    window.addEventListener('keydown', handleAdd)
+    return () => {
+      window.removeEventListener('keydown', handleAdd)
+    }
+  }, [inputValue])
+
   return (
     <Scene>
       <div className="relative">
         <Header
           handleSave={handleSave}
           handleReset={handleReset}
-          handleAdd={handleAdd}
           setInputValue={setInputValue}
           inputValue={inputValue}
         />

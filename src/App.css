@@ -12,7 +12,6 @@ body {
 }
 
 .border {
-  border: 3px solid black;
   outline: 2px double black;
   outline-offset: -8px;
 }

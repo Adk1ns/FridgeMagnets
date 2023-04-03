@@ -1,13 +1,7 @@
 import React from 'react'
 import HeaderStyles from './styles/HeaderStyles'
 
-const Header = ({
-  handleSave,
-  handleReset,
-  setInputValue,
-  inputValue,
-  handleAdd
-}) => {
+const Header = ({ handleSave, handleReset, setInputValue, inputValue }) => {
   return (
     <HeaderStyles>
       <h1>Fridge Magnets</h1>
@@ -24,7 +18,6 @@ const Header = ({
             maxLength={13}
             value={inputValue}
           />
-          <button onClick={handleAdd}>+</button>
         </>
       </div>
     </HeaderStyles>
