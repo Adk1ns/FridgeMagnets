@@ -96,7 +96,7 @@ const FridgeMagnets = () => {
     setInputValue('')
   }
 
-  //if user presses deleted key, remove the last dragged word
+  //if user presses delete key, remove the last dragged word
   //ERROR: words are out of position
   const handleDelete = e => {
     if (e.key === 'Delete') {

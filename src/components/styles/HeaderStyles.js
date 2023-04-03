@@ -39,8 +39,7 @@ const HeaderStyles = styled.div`
     }
     &:hover {
       font-style: italic;
-      text-decoration: underline;
-      color: #8e6900;
+      text-decoration: underline #8e6900;
     }
   }
 

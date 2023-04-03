@@ -8,16 +8,6 @@ const Header = ({
   inputValue,
   handleAdd
 }) => {
-  //if user presses the enter key, add the word to the fridge
-  const handleEnter = e => {
-    if (e.key === 'Enter') {
-      handleAdd()
-    }
-  }
-
-  //add event listener to listen for enter key
-  window.addEventListener('keydown', handleEnter)
-
   return (
     <HeaderStyles>
       <h1>Fridge Magnets</h1>
@@ -28,8 +18,8 @@ const Header = ({
         <>
           <input
             type="text"
-            label="Add"
-            placeholder="Add"
+            label="new word"
+            placeholder="New"
             onChange={e => setInputValue(e.target.value)}
             maxLength={13}
             value={inputValue}
