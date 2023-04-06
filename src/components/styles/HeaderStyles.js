@@ -67,6 +67,12 @@ const HeaderStyles = styled.div`
     outline-style: dashed;
     outline-width: 2px;
   }
+
+  @media (max-width: 968px) {
+    top: 84vh;
+    width: 97.55%;
+    right: 1%;
+  }
 `
 
 export default HeaderStyles
