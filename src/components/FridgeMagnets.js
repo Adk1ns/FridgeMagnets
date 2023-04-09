@@ -13,12 +13,25 @@ const FridgeMagnets = () => {
   const [about, toggleAbout] = React.useState(false)
 
   //set bounds for magnets
+  //update bounds on window resize, small screen have wider bounds
+
   const viewportWidth = window.innerWidth
-  const bounds = {
-    left: viewportWidth * 0.025,
-    top: 15,
-    right: viewportWidth * 0.44,
-    bottom: viewportWidth
+  let bounds
+
+  if (viewportWidth < 968) {
+    bounds = {
+      left: viewportWidth * 0.025,
+      top: 15,
+      right: viewportWidth * 0.9,
+      bottom: viewportWidth * 1.5
+    }
+  } else {
+    bounds = {
+      left: viewportWidth * 0.025,
+      top: 15,
+      right: viewportWidth * 0.44,
+      bottom: viewportWidth
+    }
   }
 
   //check if there are words in local storage
