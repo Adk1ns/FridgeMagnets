@@ -6,6 +6,7 @@ const Scene = styled.div`
   background: transparent;
   background-size: 100%;
   overflow: hidden;
+  position: relative;
 
   h3 {
     position: absolute;
@@ -29,7 +30,10 @@ const Scene = styled.div`
     &:hover {
       color: #8e6900;
     }
+    @media (max-width: 968px) {
+      bottom: 20%;
   }
+
 `
 
 export default Scene

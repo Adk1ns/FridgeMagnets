@@ -14,7 +14,6 @@ const FridgeMagnets = () => {
 
   //set bounds for magnets
   //update bounds on window resize, small screen have wider bounds
-
   const viewportWidth = window.innerWidth
   let bounds
 
@@ -133,14 +132,12 @@ const FridgeMagnets = () => {
 
   return (
     <Scene>
-      <div className="relative">
-        <Header
-          handleSave={handleSave}
-          handleReset={handleReset}
-          setInputValue={setInputValue}
-          inputValue={inputValue}
-        />
-      </div>
+      <Header
+        handleSave={handleSave}
+        handleReset={handleReset}
+        setInputValue={setInputValue}
+        inputValue={inputValue}
+      />
       <h3 className="about" onClick={() => toggleAbout(!about)}>
         ?
       </h3>

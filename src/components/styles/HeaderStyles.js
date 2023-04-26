@@ -3,14 +3,14 @@ import styled from 'styled-components'
 const HeaderStyles = styled.div`
   position: absolute;
   right: 3%;
-  top: 2rem;
+  top: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.25rem;
   border: 2px solid black;
   border-radius: -1rem;
-  min-height: 6rem;
+  height: 8rem;
   width: 45%;
   background: rgba(255, 255, 255, 0.65);
   display: flex;
@@ -44,7 +44,7 @@ const HeaderStyles = styled.div`
   }
 
   input {
-    background: none;
+    background: none;2rem
     border: none;
     font-size: 1.5rem;
     width: 7rem;
@@ -69,9 +69,10 @@ const HeaderStyles = styled.div`
   }
 
   @media (max-width: 968px) {
-    top: 84vh;
-    width: 97.55%;
+    top: 82%;
+    width: 97%;
     right: 1%;
+    background-color: rgba(255, 255, 255, 1);
   }
 `
 

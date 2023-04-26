@@ -15,10 +15,7 @@ const GlobalStyles = styled.div`
     width: 99.9%;
     z-index: -1;
     position: absolute;
-
-    @media (max-width: 968px) {
-      width: 200%;
-    }
+    object-fit: contain;
   }
 
   .border-bottom {

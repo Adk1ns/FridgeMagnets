@@ -17,6 +17,15 @@ const AboutStyles = styled.div`
   padding: 1rem;
   text-align: center;
 
+  @media (max-width: 968px) {
+    top: 30%;
+    left: 1%;
+    width: 90%;
+    height: 30%;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.95);
+  }
+
   h2,
   h4 {
     margin: 0.45rem;
