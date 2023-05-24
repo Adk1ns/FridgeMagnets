@@ -13,7 +13,7 @@ function App() {
   const viewportHeight = window.innerHeight
 
   return (
-    <div className="border">
+    <div className="border" id="App">
       {viewportWidth > 400 && viewportHeight < viewportWidth && (
         <GlobalStyles>
           {viewportWidth > 800 ? (
