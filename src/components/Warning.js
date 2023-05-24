@@ -5,14 +5,19 @@ const WarningStyles = styled.div`
   padding: 1rem;
   height: 95vh;
   width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  text-align: center;
 `
 
 const Warning = () => {
   return (
     <WarningStyles>
       <p>
-        This app is not supported on devices less than 400px wide, please try
-        again on a larger screen
+        This app is not supported on mobile devices. Please use a desktop or
+        laptop computer.
       </p>
     </WarningStyles>
   )

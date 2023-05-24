@@ -10,9 +10,11 @@ function App() {
   const viewportWidth =
     window.innerWidth || document.documentElement.clientWidth
 
+  const viewportHeight = window.innerHeight
+
   return (
     <div className="border">
-      {viewportWidth > 400 && (
+      {viewportWidth > 400 && viewportHeight < viewportWidth && (
         <GlobalStyles>
           {viewportWidth > 800 ? (
             <img src={fridgeWhite} className="background" />
@@ -22,7 +24,7 @@ function App() {
           <FridgeMagnets />
         </GlobalStyles>
       )}
-      {viewportWidth <= 400 && <Warning />}
+      {viewportHeight > viewportWidth && <Warning />}
     </div>
   )
 }
